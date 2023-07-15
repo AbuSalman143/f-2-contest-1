@@ -9,22 +9,20 @@ function PrintDeveloperbyMap() {
 
     const developers = arr
     .filter(employee => employee.profession === "developer")
-    .map(employee => employee.name);
-    console.log(developers);
+    .map(employee => {
+      console.log(`ID: ${employee.id}, Name: ${employee.name}, Age: ${employee.age}, Profession: ${employee.profession}`);
+    });
 }
 
 
 function PrintDeveloperbyForEach() {
   //Write your code here , just console.log
 
-  const developers = [];
-    arr.forEach(employee => {
+  arr.forEach(employee => {
     if (employee.profession === "developer") {
-      developers.push(employee.name);
+      console.log(`ID: ${employee.id}, Name: ${employee.name}, Age: ${employee.age}, Profession: ${employee.profession}`);
     }
   });
-
-  console.log(developers);
 }
 
 function addData() {
